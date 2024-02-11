@@ -2,7 +2,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>順番予約券申請フォーム</title>
+    <title>予約券申請フォーム</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
@@ -10,15 +10,26 @@
 <body>
 
     <form class="w-75 mx-auto">
-        <p class="mt-3">氏名（全角ひらがな）</p>
+        <p class="mt-3">診察券番号(半角数字 不明の場合は"0")※必須</p>
         <div>
             <input class="form-control w-100 mt-1" name="name" placeholder="" required>
         </div>
-        <p class="mt-3">診察券番号（半角数字　不明の場合は"0"）</p>
+        <p class="mt-3">氏名(全角ひらがな　例：ちば　こうせい)※診察券番号未入力の場合は必須</p>
         <div>
             <input class="form-control w-100 mt-1" name="bangou" required>
         </div>
-        
+        <p class="mt-3"></p>
+        <div>
+            <input class="form-control w-100 mt-1" name="shushoujou" required>
+        </div>
+        <p class="mt-3">生年月日（例2012年12月1日）※診察券番号未入力の場合は必須</p>
+        <div>
+            <input class="form-control w-100 mt-1" name="keika" required>
+        </div>
+        <p class="mt-3">入力に不備がある場合発行された予約券は無効となります。入力データおよびLINEのIDは診察終了時まで保存されます。ご了承いただければ"はい"と入力後"送信"をタップしてください。</p>
+        <div>
+            <input class="form-control w-100 mt-1" name="hatunetu" required>
+        </div>
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
     </form>
 
